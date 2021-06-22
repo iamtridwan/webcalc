@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root{
+    --font_fam : Spartan;
+    /* THEME 1 */
+    /* Theme 1 background */
+    --mainBg:hsl(222, 26%, 31%);
+    --toggle_key_bg:hsl(223, 31%, 20%);
+    --screenBg: hsl(224, 36%, 15%);
+    /*Theme 1 keys */
+    --keyBg:hsl(225, 21%, 49%);
+    --keyShadow: hsl(224, 28%, 35%);
+    --redBg: hsl(6, 63%, 50%);
+    --redShadow: hsl(6, 70%, 34%);
+    --orangeBg:hsl(30, 25%, 89%);
+    --orangeShadow: hsl(28, 16%, 65%);
+    /* Theme 1 text */
+    --pryClr: hsl(221, 14%, 31%);
+    --secClr: hsl(0, 0, 100%);
+    /* THEME 2 */
+    /* Theme 2 background */
+    --mainBg2:hsl(0, 0%, 90%);
+    --toggle_key_bg2:hsl(0, 5%, 81%);
+    --screenBg2: hsl(0, 0%, 93%);
+    /*Theme 2 keys */
+    --keyBg2:hsl(185, 42%, 37%);
+    --keyShadow2: hsl(185, 58%, 25%);
+    --redBg2: hsl(25, 98%, 40%);
+    --redShadow2: hsl(25, 99%, 27%);
+    --orangeShadow2: hsl(45, 7%, 89%);
+    --yellowBg:hsl(45, 7%, 89%);
+    /* Theme 2 text */
+    --pryClr2: hsl(221, 14%, 31%);
+    --secClr2: hsl(0, 0, 100%);
+    /* THEME 3 */
+    /* Theme 3 background */
+    --mainBg3:hsl(268, 75%, 9%);
+    --toggle_key_bg3:hsl(268, 71%, 12%);
+    --screenBg3: hsl(268, 71%, 12%);
+    /*Theme 3 keys */
+    --keyBg3:hsl(281, 89%, 26%);
+    --keyShadow3: hsl(285, 91%, 52%);
+    --Purecyan: hsl(176, 100%, 44%);
+    --Softcyan: hsl(177, 92%, 70%);
+    --darkviolet:hsl(268, 47%, 21%);
+    --Darkmagenta: hsl(290, 70%, 36%);
+    /* Theme 3 text */
+    --Lightyellow:hsl(52, 100%, 62%);
+    --pryClr3: hsl(198, 20%, 13%);
+    --secClr3: hsl(0, 0, 100%);
+ 
+ 
+
+
+}
+
+/* general style */
+*{
+    list-style:none;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font_fam), sans-serif;
+    background-color:var(--mainBg) ;
+    font-weight: 700;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main{
+    
+    width:30%;
+    margin: 40px auto 20px auto;
+    color:white;
+}
+/* top container */
+.top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+#calc{
+    font-size: 25px;
+    position: relative;
+    top: 25px;
+   
+}
+.theme{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+
+}
+.theme p{
+    text-transform: uppercase;
+    margin-right: 20px;
+    position: relative;
+    top: 25px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.digits{
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.toggle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle-container{
+    
+    width:80px;
+    height: 25px;
+    background-color: var(--toggle_key_bg);
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: -5px;
+    
+}
+
+.toggle-icon{
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--redBg);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: left .08s linear;
+}
+/* screen */
+.screen{
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    background-color: var(--screenBg);
+    padding: 12px 8px;
+    margin-bottom: 20px;
+    position: relative;
+    
+    
+}
+h1{
+   float: right;
+   font-size: 1.8rem;
+   position: relative;
+   bottom: 6px;
+}
+.button-container{
+
+    background-color: var(--toggle_key_bg);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.short{
+    width:23%;
+    background-color: var(--orangeBg);
+    border-top: none;
+    border-bottom: 5px solid var(--orangeShadow);
+    border-left: none;
+    border-right: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 28px;
+    margin: 8px 2px;
+    text-align: center;
+    display: inline-block;
+    color:var(--pryClr);
+    
+    
+}
+
+
+#del{
+    width:23%;
+}
+#reset{
+    width:48%;
+    margin: 8px 2px;
+    text-align: center;
+    display: inline-block;
+}
+
+#del, #reset{
+    background-color: var(--keyBg);
+    color: var(--secClr);
+    font-size: 15px;
+    padding: 15px;
+    border-bottom: 5px solid var(--keyShadow);
+    font-weight: 500;
+    outline: none;
+    border-radius: 6px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#equals{
+    width:48%;
+    margin: 8px 2px;
+    text-align: center;
+    display: inline-block;
+    background-color: var(--redBg);
+    color: var(--secClr);
+    font-size: 15px;
+    padding: 15px;
+    border-bottom: 5px solid var(--redShadow);
+    border-radius: 6px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline:none;
+}
+
+.attribution { font-size: 16px; text-align: center; 
+margin: 10px auto;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width:500px){
+    main{
+        width: 90%;
+        margin: 60px 5px 20px 5px;
+        color:white;
+    }
+}
